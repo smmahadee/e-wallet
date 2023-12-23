@@ -33,14 +33,14 @@ All user data is securely stored in local storage, ensuring that your money note
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-project.git
+   git clone [https://github.com/your-username/your-project.git](https://github.com/smmahadee/e-wallet.git)
 
    ```
 
 2. Change into the project directory:
 
    ```bash
-   cd your-project
+   cd e-wallet
 
    ```
 
