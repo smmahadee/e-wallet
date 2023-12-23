@@ -1,35 +1,32 @@
-# Project Name
+# E-Wallet Project
 
-Description of your project goes here.
+Welcome to the E-Wallet project! This modern web application leverages the latest technologies, including Next.js 14, React 18, Tailwind CSS, Zustand for state management, React Hook Form, Zod, and Framer Motion for enhanced animations. This powerful combination provides users with a seamless and efficient electronic wallet experience.
 
-## Table of Contents
+## Features
 
-- [Dependencies](#dependencies)
-- [Installation](#installation)
-- [Usage](#usage)
+- **Create Money Notes:** Users can create digital money notes, representing various currencies or denominations.
 
-## Dependencies
+- **Add/Update Quantity:** Easily manage the quantity of each money note. Add new notes or update existing ones as needed.
 
-This project uses the following dependencies:
+- **Delete Notes:** Remove unwanted or outdated money notes from your digital wallet.
 
-- [@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers) - Version 3.3.2
-- [framer-motion](https://www.npmjs.com/package/framer-motion) - Version 10.16.16
-- [immer](https://www.npmjs.com/package/immer) - Version 10.0.3
-- [next](https://www.npmjs.com/package/next) - Version 14.0.4
-- [react](https://www.npmjs.com/package/react) - Version 18
-- [react-dom](https://www.npmjs.com/package/react-dom) - Version 18
-- [react-hook-form](https://www.npmjs.com/package/react-hook-form) - Version 7.49.2
-- [react-hot-toast](https://www.npmjs.com/package/react-hot-toast) - Version 2.4.1
-- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge) - Version 2.2.0
-- [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate) - Version 1.0.7
-- [zod](https://www.npmjs.com/package/zod) - Version 3.22.4
-- [zustand](https://www.npmjs.com/package/zustand) - Version 4.4.7
+## Technologies Used
 
-### Dev Dependencies
+- **Next.js 14:** The latest version of Next.js for server-rendered React applications with improved features and performance.
 
-- [autoprefixer](https://www.npmjs.com/package/autoprefixer) - Version 10.0.1
-- [postcss](https://www.npmjs.com/package/postcss) - Version 8
-- [tailwindcss](https://www.npmjs.com/package/tailwindcss) - Version 3.3.0
+- **React 18:** Utilizing the latest features of React to enhance the user interface and provide a more responsive experience.
+
+- **Tailwind CSS:** A utility-first CSS framework for building modern and responsive user interfaces.
+
+- **Zustand:** A lightweight state management library for React, providing a simple and efficient solution for managing application state.
+
+- **React Hook Form:** A library for managing form state and validation in React applications, ensuring a smooth and user-friendly form experience.
+
+- **Zod:** A validation library, used for ensuring data consistency and correctness in your application.
+
+## Data Persistence
+
+All user data is securely stored in local storage, ensuring that your money notes and wallet information persist even when the user closes the application. Your data is never lost!
 
 ## Installation
 
@@ -50,10 +47,12 @@ This project uses the following dependencies:
 3. Install dependencies:
    ```bash
    npm install
+   
    ```
 
 ## Usage
 
 ```bash
 npm run dev
+
 ```
