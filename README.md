@@ -10,6 +10,8 @@ Welcome to the E-Wallet project! This modern web application leverages the lates
 
 - **Delete Notes:** Remove unwanted or outdated money notes from your digital wallet.
 
+- **Form Validation:** Every input implemented with proper validation. User can't enter fraction number or text in input box.
+
 ## Technologies Used
 
 - **Next.js 14:** The latest version of Next.js for server-rendered React applications with improved features and performance.
@@ -45,9 +47,10 @@ All user data is securely stored in local storage, ensuring that your money note
    ```
 
 3. Install dependencies:
+
    ```bash
    npm install
-   
+
    ```
 
 ## Usage

@@ -10,8 +10,8 @@ export default function Home() {
       <TotalBalance />
       <Notes />
       <div className=' flex flex-col gap-6 text-[#333] overflow-y-auto'>
-        <UpdateNote />
         <AddNote />
+        <UpdateNote />
         <DeleteNote />
       </div>
     </>

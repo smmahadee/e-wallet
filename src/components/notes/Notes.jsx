@@ -14,7 +14,9 @@ export default function () {
           <Note key={note?.value} data={note} index={index} />
         ))
       ) : (
-        <p>No notes in your wallet, please add some note</p>
+        <p className='text-center col-span-2 text-xl'>
+          ☹️ Your wallet is empty, please add some notes.
+        </p>
       )}
     </motion.main>
   );

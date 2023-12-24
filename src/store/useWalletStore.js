@@ -6,11 +6,11 @@ const useWalletStore = create(
   persist(
     immer(
       devtools(set => ({
-        totalBalance: 0,
+        totalBalance: 255,
         totalNotes: [
-          // { value: 1, quantity: 5 },
-          // { value: 5, quantity: 6 },
-          // { value: 10, quantity: 8 },
+          { value: 1, quantity: 5 },
+          { value: 5, quantity: 10 },
+          { value: 10, quantity: 20 },
         ],
 
         updateQuantity: payload =>
