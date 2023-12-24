@@ -1,10 +1,10 @@
 'use client';
 
-import useWalletStore from '@/store/useWalletStore';
+import { useWallet } from '@/store/useStore';
 import { formatCurrency } from '@/utils/helper';
 
 export default function () {
-  const totalBalance = useWalletStore(state => state.totalBalance);
+  const { totalBalance } = useWallet();
 
   return (
     <section className='col-span-2 flex flex-col sm:flex-row  sm:gap-4 sm:items-center '>

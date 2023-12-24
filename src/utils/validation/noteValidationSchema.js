@@ -10,6 +10,9 @@ export const updateNoteSchema = z.object({
     })
     .refine(val => parseInt(val) > 0, {
       message: 'Quantity must be greater than zero',
+    })
+    .refine(val => !/\./.test(val), {
+      message: 'Note quantity must be a whole number',
     }),
 });
 
@@ -22,6 +25,9 @@ export const addNoteSchema = z.object({
     })
     .refine(val => parseInt(val) > 0, {
       message: 'Note value must be greater than zero',
+    })
+    .refine(val => !/\./.test(val), {
+      message: 'Note value must be a whole number',
     }),
   quantity: z
     .string()
@@ -31,6 +37,9 @@ export const addNoteSchema = z.object({
     })
     .refine(val => parseInt(val) > 0, {
       message: 'Quantity must be greater than zero',
+    })
+    .refine(val => !/\./.test(val), {
+      message: 'Note quantity must be a whole number',
     }),
 });
 

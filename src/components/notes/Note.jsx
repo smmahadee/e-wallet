@@ -6,13 +6,15 @@ import { useMemo } from 'react';
 
 export default function ({ data, index }) {
   const totalValue = useMemo(() => data?.value * data?.quantity, [data]);
-  const randomNumber = generateRandomNumber(1, 4);
+  const randomNumber = useMemo(() => generateRandomNumber(1, 4), []);
 
   return (
     <motion.div
+      key={index}
       initial={{ opacity: 0, y: '20px' }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: 0.2 * index }}
+      exit={{ opacity: 0, y: '20px' }}
       className='relative h-40 w-full   rounded-md '
     >
       <Image

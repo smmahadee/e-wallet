@@ -6,11 +6,11 @@ const useWalletStore = create(
   persist(
     immer(
       devtools(set => ({
-        totalBalance: 115,
+        totalBalance: 0,
         totalNotes: [
-          { value: 1, quantity: 5 },
-          { value: 5, quantity: 6 },
-          { value: 10, quantity: 8 },
+          // { value: 1, quantity: 5 },
+          // { value: 5, quantity: 6 },
+          // { value: 10, quantity: 8 },
         ],
 
         updateQuantity: payload =>
@@ -28,13 +28,35 @@ const useWalletStore = create(
           }),
 
         addNote: payload =>
-          set(state => ({
-            totalNotes: [
-              ...state.totalNotes,
-              { value: +payload.note, quantity: +payload.quantity },
-            ],
-            totalBalance: state.totalBalance + payload.note * payload.quantity,
-          })),
+          set(state => {
+            const tempNotes = [...state.totalNotes];
+            const newNote = {
+              value: +payload.note,
+              quantity: +payload.quantity,
+            };
+
+            let inserted = false;
+
+            for (let i = tempNotes.length - 1; i >= 0; i--) {
+              if (+payload.note <= tempNotes[i].value) {
+                tempNotes[i + 1] = tempNotes[i];
+              } else {
+                tempNotes[i + 1] = newNote;
+                inserted = true;
+                break;
+              }
+            }
+
+            if (!inserted) {
+              tempNotes[0] = newNote; // Insert at the beginning if not inserted yet
+            }
+
+            return {
+              totalNotes: tempNotes,
+              totalBalance:
+                state.totalBalance + payload.note * payload.quantity,
+            };
+          }),
 
         deleteNote: payload =>
           set(state => {
@@ -49,15 +71,13 @@ const useWalletStore = create(
               }
             });
 
-            console.log(totalNotes, 't');
-
             return { totalNotes, totalBalance };
           }),
       }))
     ),
     {
       name: 'wallet-storage',
-      skipHydration: true,
+      // skipHydration: true,
     }
   )
 );
