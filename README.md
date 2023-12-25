@@ -12,8 +12,6 @@ Emphasizing reusability, the project is designed with a majority of components a
 
 - **Delete Notes:** Remove unwanted or outdated money notes from your digital wallet.
 
-- **Form Validation:** Every input implemented with proper validation. User can't enter fraction number or text in input box.
-
 ## Technologies Used
 
 - **Next.js 14:** The latest version of Next.js for server-rendered React applications with improved features and performance.
