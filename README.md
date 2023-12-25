@@ -1,6 +1,8 @@
 # E-Wallet Project
 
-Welcome to the E-Wallet project! This modern web application leverages the latest technologies, including Next.js 14, React 18, Tailwind CSS, Zustand for state management, React Hook Form, Zod, and Framer Motion for enhanced animations. This powerful combination provides users with a seamless and efficient electronic wallet experience.
+Explore the cutting-edge E-Wallet project, a modern web application that redefines electronic wallet experiences. Leveraging state-of-the-art technologies such as Next.js 14, React 18, Tailwind CSS, Zustand for efficient state management, React Hook Form, Zod for robust form handling, and Framer Motion for captivating animations, this application ensures a seamless and powerful user journey.
+
+Emphasizing reusability, the project is designed with a majority of components as reusable units. 
 
 ## Features
 
